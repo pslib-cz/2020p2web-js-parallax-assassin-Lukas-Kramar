@@ -26,4 +26,40 @@
         <p>Creating parallax effect</p>
     </section>
 </body>
+<script>    
+    let staraVyskaScrollu = window.scrollY;
+    window.onscroll = (e) => posunuti();
+    function posunuti ()
+    {                
+        //console.log(novaVyskaScrollu);    
+        let kolekce = document.getElementsByClassName("parallax-layer");        
+            for (let element of kolekce)
+            {   
+            //console.log(element.className);                
+                if(element.className == "parallax-layer layer-1")
+                {
+                    element.style.transform = "translateY(-"+ window.scrollY*0.3 +"px)";
+                }
+                else if(element.className == "parallax-layer layer-2")
+                {
+                    element.style.transform = "translateY(-"+ window.scrollY*0.8 +"px)";
+                }
+                else if(element.className == "parallax-layer layer-3 layer-man")
+                {
+                    element.style.transform = "translateY(-"+ window.scrollY +"px)";
+                }
+                else if(element.className == "parallax-layer layer-4")
+                {
+                    element.style.transform = "translateY(-" +window.scrollY+"px) translateX(-" +window.scrollY/2 +"px)";
+                }
+                
+                else if(element.className == "parallax-layer layer-background")
+                {
+                    
+                }
+            }
+        staraVyskaScrollu = novaVyskaScrollu;
+    }
+    
+</script>
 </html>
