@@ -27,30 +27,30 @@
     </section>
 </body>
 <script>   
-    window.onscroll = (e) => posunuti();
-    function posunuti ()
-    {      
-        let kolekce = document.getElementsByClassName("parallax-layer");        
-            for (let element of kolekce)
-            {   
-            //console.log(element.className);                
-                if(element.className == "parallax-layer layer-1")
-                {
-                    element.style.transform = "translateY(-"+ window.scrollY*0.3 +"px)";
-                }
-                else if(element.className == "parallax-layer layer-2")
-                {
-                    element.style.transform = "translateY(-"+ window.scrollY*0.8 +"px)";
-                }
-                else if(element.className == "parallax-layer layer-3 layer-man")
-                {
-                    element.style.transform = "translateY(-"+ window.scrollY +"px)";
-                }
-                else if(element.className == "parallax-layer layer-4")
-                {
-                    element.style.transform = "translateY(-" +window.scrollY+"px) translateX(-" +window.scrollY/2 +"px)";
-                }
+let kolekce = document.getElementsByClassName("parallax-layer");
+    window.onscroll = (e) => posunuti(kolekce);
+    function posunuti (kolekce)
+    {     
+        for (let element of kolekce)
+        {   
+        //console.log(element.className);                
+            if(element.className == "parallax-layer layer-1")
+            {
+                element.style.transform = "translateY(-"+ window.scrollY*0.3 +"px)";
             }
+            else if(element.className == "parallax-layer layer-2")
+            {
+                element.style.transform = "translateY(-"+ window.scrollY*0.8 +"px)";
+            }
+            else if(element.className == "parallax-layer layer-3 layer-man")
+            {
+                element.style.transform = "translateY(-"+ window.scrollY +"px)";
+            }
+            else if(element.className == "parallax-layer layer-4")
+            {
+                element.style.transform = "translateY(-" +window.scrollY+"px) translateX(-" +window.scrollY/2 +"px)";
+            }
+        }
     }
 </script>
 </html>
