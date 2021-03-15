@@ -26,12 +26,10 @@
         <p>Creating parallax effect</p>
     </section>
 </body>
-<script>    
-    let staraVyskaScrollu = window.scrollY;
+<script>   
     window.onscroll = (e) => posunuti();
     function posunuti ()
-    {                
-        //console.log(novaVyskaScrollu);    
+    {      
         let kolekce = document.getElementsByClassName("parallax-layer");        
             for (let element of kolekce)
             {   
@@ -52,14 +50,7 @@
                 {
                     element.style.transform = "translateY(-" +window.scrollY+"px) translateX(-" +window.scrollY/2 +"px)";
                 }
-                
-                else if(element.className == "parallax-layer layer-background")
-                {
-                    
-                }
             }
-        staraVyskaScrollu = novaVyskaScrollu;
     }
-    
 </script>
 </html>
